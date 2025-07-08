@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Gaurav's Blog</title>
+        <link>https://your-deployed-site.com</link>
+        <description>AI, Mobile, SaaS and Architecture Insights</description>
+        <lastBuildDate>Tue, 08 Jul 2025 18:44:42 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Next.js RSS generator</generator>
+        <language>en</language>
+        <copyright>© 2025 Gaurav</copyright>
+        <item>
+            <title><![CDATA[How I Built the Stock Predictor App]]></title>
+            <link>https://your-deployed-site.com/blog/ai-in-mobile-development.mdx</link>
+            <guid isPermaLink="false">https://your-deployed-site.com/blog/ai-in-mobile-development.mdx</guid>
+            <pubDate>Tue, 08 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A walkthrough of building a real-time stock predictor using AWS Lambda and SageMaker.]]></description>
+            <author>gaurav@example.com (Gaurav Kumar)</author>
+        </item>
+        <item>
+            <title><![CDATA[how-i-built-stock-predictor.mdx]]></title>
+            <link>https://your-deployed-site.com/blog/how-i-built-stock-predictor.mdx</link>
+            <guid isPermaLink="false">https://your-deployed-site.com/blog/how-i-built-stock-predictor.mdx</guid>
+            <pubDate>Tue, 08 Jul 2025 18:44:42 GMT</pubDate>
+            <author>gaurav@example.com (Gaurav Kumar)</author>
+        </item>
+    </channel>
+</rss>
