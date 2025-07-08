@@ -23,7 +23,7 @@ export default function Contact() {
 
       <Button type="submit">Send Message</Button>
 
-      {submitted && <p className="text-green-600">Thanks! I'll get back to you soon.</p>}
+      {submitted && <p className="text-green-600">Thanks! I&apos;ll get back to you soon.</p>}
     </form>
   );
 }

@@ -16,7 +16,7 @@ export default function Home() {
         />
       </div>
 
-      <h1 className="text-4xl font-bold mb-2">Hi, I'm Gaurav Kumar</h1>
+      <h1 className="text-4xl font-bold mb-2">Hi, I&apos;m Gaurav Kumar</h1>
       <p className="text-gray-700 mb-6">
         Solution Architect & AI + Mobile Developer. I build intelligent apps blending Swift, Kotlin, React, React Native, Python, and AWS.
       </p>
