@@ -10,7 +10,7 @@ interface BlogParams {
   };
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const files = fs.readdirSync(path.join(process.cwd(), "content/blog"));
   return files.map((file) => ({
     slug: file.replace(/\.mdx$/, ""),
