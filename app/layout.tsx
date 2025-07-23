@@ -20,8 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Link>
           <nav className="space-x-6 text-sm">
             <Link href="/">Home</Link>
-            <Link href="/projects/stock-predictor">Stock Predictor</Link>
-            <Link href="/projects/myfood">MyFood</Link>
+            <Link href="/projects">Projects</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>

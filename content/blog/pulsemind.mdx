@@ -1,0 +1,95 @@
+---
+title: "Building PulseMind: A Mindful Wellness App Powered by SwiftUI and Apple HealthKit"
+date: "2025-07-21"
+author: "Gaurav Kumar"
+slug: "pulsemind"
+description: "PulseMind is a mindfulness and wellness app designed to help users reduce stress, reflect through journaling, and stay mindful using HealthKit and Apple Watch integration."
+---
+
+In today’s fast-paced world, managing stress and staying mindful are more important than ever. That’s exactly why I created **PulseMind** — a wellness app designed to help users understand their stress levels, build mindful habits, and reflect through journaling and breathing exercises.
+
+## 🎯 App Overview
+PulseMind combines real-time health data with guided features that promote emotional and mental well-being. Core features include:
+
+- 📈 **Stress Score Dashboard** based on HRV, heart rate, and other metrics.
+- ✍️ **Daily Journaling** with optional reminders.
+- 🧘 **Guided Breathing Exercises** with haptic feedback.
+- ⏰ **Customizable Reminders** to build healthy habits.
+- 🔄 **Apple Watch Companion** for real-time insights and mindfulness sessions.
+
+## 🧩 Tech Stack
+| Component         | Tech Used             |
+|------------------|------------------------|
+| iOS App          | Swift, SwiftUI         |
+| Watch App        | SwiftUI for watchOS    |
+| Health Integration | HealthKit            |
+| Local Storage    | CoreData, UserDefaults |
+| Notifications    | UNUserNotificationCenter |
+| In-App Purchase  | StoreKit               |
+
+## 🔍 Key Features and Implementation
+
+### 🧠 Stress Score Calculation
+We devised a custom Stress Score Algorithm based on:
+- Heart Rate (BPM)
+- HRV (SDNN)
+- Respiratory Rate
+- Sleep Duration
+
+We normalize and weight each factor to derive a score between 0–100, helping users monitor trends and take action early.
+
+```swift
+let score = calculateStressScore(hrv: hrv, heartRate: heartRate, ...)
+```
+
+### ✍️ Journal + Reminders
+Users can log reflections in a private journal stored locally. With one tap, they can enable a Daily Reminder.
+
+```swift
+NotificationManager.shared.scheduleDailyReminder(...)
+```
+
+### 🧘 Breathing Coach (with haptics)
+The breathing module helps users focus using “Inhale / Exhale” prompts. Haptic cues and animated visuals enhance the experience.
+
+```swift
+WKInterfaceDevice.current().play(.directionUp)
+```
+
+### ⌚ Watch Integration
+Includes:
+- Dashboard with real-time metrics
+- Breathing session control
+- Haptic & animated feedback
+
+Custom UI with `ScrollView` to avoid layout issues near the digital crown.
+
+## 🧪 Challenges and Learnings
+- **Background thread publishing**: Ensured HealthKit fetches run on main queue.
+- **Watch UI quirks**: Redesigned layout to prevent clipping.
+- **Notification testing**: Validated schedules and permissions.
+
+## 💰 Monetization Strategy
+While PulseMind is free, we plan to add a one-time unlock for:
+- Advanced trend charts
+- AI-based journaling prompts
+- Audio-guided breathing
+
+## 🔒 Privacy-First Approach
+We do not collect or upload personal or health data. Everything is stored **on-device**.
+
+👉 [Privacy Policy](/policies/pulsemind/privacy)
+👉 [Terms of Service](/policies/pulsemind/terms)
+
+## 📝 What’s Next
+- Add interactive charts
+- Android version (Kotlin Multiplatform)
+- iOS 17+ mental health insights
+- ML-based personalization
+
+## 🚀 Final Thoughts
+Building PulseMind has been a fulfilling journey. I hope it inspires others to explore mindful UX and meaningful tech.
+
+📧 Email me at [choti2792@gmail.com](mailto:choti2792@gmail.com)
+
+🔗 *Coming soon to the App Store*
