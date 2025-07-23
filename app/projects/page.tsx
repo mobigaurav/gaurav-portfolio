@@ -9,18 +9,24 @@ const projects = [
     description: "Mindful wellness app for iOS + watchOS with HealthKit, journaling, and breathing.",
     tech: ["SwiftUI", "HealthKit", "CoreData"],
     github: "https://github.com/mobigaurav/pulsemind",
+    privacyPolicy:"../policies/pulsemind/privacy",
+    tos:'../policies/pulsemind/terms',
   },
   {
     title: "Stock Predictor",
     description: "AI-powered stock trend prediction app using LSTM and AWS backend.",
     tech: ["Python", "SageMaker", "React Native"],
     github: "https://github.com/mobigaurav/ai-stock-predictor",
+    privacyPolicy:"../policies/stock-predictor/privacy",
+    tos:'../policies/stock-predictor/terms',
   },
   {
     title: "MyFood",
     description: "Food marketplace for home cooks using AWS + React Native.",
     tech: ["AWS", "React Native", "DynamoDB"],
     github: "https://github.com/mobigaurav/myfood-app",
+    privacyPolicy:"../policies/myfood/privacy",
+    tos:'../policies/myfood/terms',
   },
 ];
 
@@ -37,6 +43,14 @@ export default function ProjectsPage() {
               {proj.tech.map((t) => (
                 <span key={t} className="bg-gray-100 text-xs px-2 py-1 rounded">{t}</span>
               ))}
+            </div>
+            <div className="flex justify-between text-sm text-gray-500 mb-2">
+              <Link href={proj.privacyPolicy} target="_blank" className="hover:underline">
+                Privacy Policy
+              </Link>
+              <Link href={proj.tos} target="_blank" className="hover:underline">
+                Terms of Service
+              </Link>
             </div>
             <Link href={proj.github} target="_blank" className="inline-flex items-center text-blue-600 hover:underline">
               <FaGithub className="mr-2" /> View on GitHub
